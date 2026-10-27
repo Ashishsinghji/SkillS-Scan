@@ -1,0 +1,52 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#021B2B;
+  overflow-x:hidden;
+  color:#ffffff;
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight:600;
+  letter-spacing:0.3px;
+}
+
+p{
+  font-size:15px;
+  color:#d7e5ea;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+button{
+  cursor:pointer;
+  transition:0.3s ease;
+  font-family:inherit;
+}
+
+input,
+textarea,
+select{
+  font-family:inherit;
+}

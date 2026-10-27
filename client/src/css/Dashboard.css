@@ -1,0 +1,346 @@
+.dashboard-page {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient( 135deg,#021B2B 0%, #003B4A 45%, #00A5A5 100%);
+}
+
+.dashboard-content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 45px 50px 60px;
+    color: #ffffff !important;
+    overflow-x: hidden;
+}
+
+.dashboard-header {
+    margin-bottom: 38px;
+    max-width: 900px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 12px;
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+}
+
+.dashboard-header p {
+    margin: 0;
+    max-width: 760px;
+    color: #d7eeee;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 24px;
+
+    margin-bottom: 42px;
+}
+
+.dashboard-card {
+    min-height: 150px;
+    box-sizing: border-box;
+
+    padding: 25px 26px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 12px 28px rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    box-shadow:
+        0 18px 35px rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+}
+
+.dashboard-card h3 {
+    margin: 0 0 14px;
+
+    color: #d9f3f3;
+
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.dashboard-card h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.dashboard-card span {
+    display: block;
+
+    color: #b8d5d8;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions {
+    margin-top: 4px;
+    margin-bottom: 42px;
+}
+
+.quick-actions h2,
+.recent-section h2 {
+    margin: 0 0 20px;
+
+    font-size: 23px;
+    line-height: 1.3;
+    font-weight: 650;
+
+    color: #ffffff;
+}
+
+.action-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.action-buttons button {
+    min-width: 170px;
+
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #00d4d4;
+    color: #002b36;
+
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(
+            0,
+            0,
+            0,
+            0.14
+        );
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.action-buttons button:hover {
+    transform: translateY(-3px);
+
+    background: #00ffff;
+
+    box-shadow:
+        0 12px 22px rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+}
+
+.action-buttons button:active {
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RECENT ANALYSIS
+========================= */
+
+.recent-section {
+    margin-top: 5px;
+}
+
+.activity-card {
+    padding: 25px 28px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.11
+    );
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 25px rgba(
+            0,
+            0,
+            0,
+            0.17
+        );
+}
+
+.activity-card p {
+    margin: 0;
+
+    color: #d7eeee;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.activity-card p + p {
+    margin-top: 14px;
+}
+
+.activity-card strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+.hello-icon {
+    margin-left: 10px;
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    .dashboard-content {
+        padding: 38px 35px 50px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 34px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-content {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+        padding: 30px 25px 45px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 24px 18px 35px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 27px;
+    }
+
+    .dashboard-header p {
+        font-size: 14px;
+    }
+
+    .dashboard-card {
+        padding: 22px;
+    }
+
+    .dashboard-card h2 {
+        font-size: 30px;
+    }
+
+    .quick-actions h2,
+    .recent-section h2 {
+        font-size: 21px;
+    }
+
+    .activity-card {
+        padding: 21px;
+    }
+}

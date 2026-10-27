@@ -1,0 +1,225 @@
+.resume-page {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #021B2B, #003B4A, #00A5A5);
+}
+
+.resume-content {
+  margin-left: 260px;
+  width: 100%;
+  padding: 40px;
+  color: white;
+}
+
+.resume-content h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.resume-content p {
+  color: #d9d9d9;
+  line-height: 1.6;
+}
+
+.upload-card,
+.analysis-result,
+.result-placeholder {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.upload-card h2,
+.analysis-result h2,
+.result-placeholder h2 {
+  margin-bottom: 15px;
+}
+
+.upload-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.08);
+  color: white;
+}
+
+.upload-card input::file-selector-button {
+  background: #00d4d4;
+  color: #021B2B;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.selected-file {
+  margin-bottom: 20px;
+  color: #bdefff;
+}
+
+.analyze-btn {
+  background: #00d4d4;
+  color: #021B2B;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.analyze-btn:hover {
+  background: #00ffff;
+  transform: translateY(-3px);
+}
+
+.analyze-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.result-top {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.score-card,
+.role-card {
+  flex: 1;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.05);
+  text-align: center;
+  transition: .3s;
+}
+
+.score-card:hover,
+.role-card:hover {
+  transform: translateY(-5px);
+}
+.learning-tag svg {
+  font-size: 12px;
+}
+
+.score-circle {
+  width: 170px;
+  height: 170px;
+  margin: 25px auto;
+  border-radius: 50%;
+  border: 10px solid #00d4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,212,212,.35);
+}
+
+.career-role {
+  font-size: 28px;
+  color: #4deeea;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.role-match {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 35px;
+}
+
+.skill-tag,
+.missing-tag,
+.learning-tag {
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.skill-tag {
+  background: rgba(0,212,212,.15);
+  border: 1px solid #00d4d4;
+}
+
+.missing-tag {
+  background: rgba(255,77,77,.15);
+  border: 1px solid #ff4d4d;
+}
+
+.learning-tag {
+  background: rgba(255,209,102,.18);
+  border: 1px solid #ffd166;
+}
+
+.skill-tag:hover,
+.missing-tag:hover,
+.learning-tag:hover {
+  transform: scale(1.05);
+}
+
+.loading {
+  margin-top: 20px;
+  color: #00ffff;
+  font-weight: 600;
+}
+
+.upload-message {
+  margin-top: 20px;
+  color: #4deeea;
+  font-weight: 600;
+}
+
+.result-placeholder {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+
+  .resume-content {
+    margin-left: 70px;
+    padding: 25px;
+  }
+
+  .result-top {
+    flex-direction: column;
+  }
+
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .resume-content h1 {
+    font-size: 30px;
+  }
+
+  .analyze-btn {
+    width: 100%;
+  }
+
+  .skills-list {
+    gap: 10px;
+  }
+
+}

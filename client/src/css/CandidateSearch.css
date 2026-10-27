@@ -1,0 +1,59 @@
+.candidate-page{
+    display:flex;
+    min-height:100vh;
+    background:linear-gradient(135deg,#021B2B,#003B4A,#00A5A5);
+}
+
+.candidate-content{
+    margin-left:260px;
+    width:100%;
+    padding:40px;
+    color:white;
+}
+
+.search-box{
+    display:flex;
+    gap:15px;
+    margin:30px 0;
+}
+
+.search-box input{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.search-box button{
+    padding:14px 25px;
+    border:none;
+    border-radius:10px;
+    background:#00d4d4;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.candidate-results{
+    margin-top:30px;
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:15px;
+}
+
+.candidate-card{
+    background:rgba(255,255,255,.08);
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.candidate-card h3{
+    color:#00ffff;
+    margin-bottom:10px;
+}
+
+.candidate-card p{
+    margin:8px 0;
+}

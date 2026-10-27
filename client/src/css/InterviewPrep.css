@@ -1,0 +1,570 @@
+/* =========================================================
+   INTERVIEW PREPARATION PAGE
+========================================================= */
+
+.interview-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f8fc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.interview-content {
+  flex: 1;
+  min-width: 0;
+  width: calc(100% - 292px);
+  margin-left: 292px;
+  padding: 24px 32px 28px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.interview-header {
+  margin-bottom: 18px;
+}
+
+.interview-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #008b8b;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.interview-header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #102a43;
+  font-weight: 750;
+}
+
+.interview-header p {
+  margin: 6px 0 0;
+  color: #66788a;
+  font-size: 14px;
+}
+
+/* =========================================================
+   MAIN OPTIONS
+========================================================= */
+
+.interview-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.prep-option {
+  width: 100%;
+  min-width: 0;
+  min-height: 82px;
+  border: 1px solid #e1e9f0;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 12px rgba(25, 55, 85, 0.05);
+  box-sizing: border-box;
+}
+
+.prep-option:hover {
+  transform: translateY(-2px);
+  border-color: #8acaca;
+  box-shadow: 0 7px 18px rgba(25, 55, 85, 0.08);
+}
+
+.prep-option.active {
+  border-color: #00a6a6;
+  background: #f0fbfb;
+  box-shadow: 0 6px 18px rgba(0, 166, 166, 0.1);
+}
+
+.option-icon {
+  min-width: 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #e8f7f7;
+  color: #008f8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.prep-option h3 {
+  margin: 0 0 4px;
+  color: #17324d;
+  font-size: 15px;
+}
+
+.prep-option p {
+  margin: 0;
+  color: #738497;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.recommended-option .option-icon {
+  color: #c28a00;
+  background: #fff7df;
+}
+
+/* =========================================================
+   ROLE SELECTOR
+========================================================= */
+
+.role-selector {
+  background: #ffffff;
+  border: 1px solid #e2eaf1;
+  border-radius: 12px;
+  padding: 13px 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.role-selector label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #29445e;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.role-selector select {
+  flex: 1;
+  max-width: 320px;
+  padding: 9px 12px;
+  border: 1px solid #d7e2eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #253f56;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.role-selector select:focus {
+  border-color: #00a6a6;
+  box-shadow: 0 0 0 3px rgba(0, 166, 166, 0.1);
+}
+
+/* =========================================================
+   RECOMMENDED BANNER
+========================================================= */
+
+.recommended-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fffaf0;
+  border: 1px solid #f1dfac;
+  border-radius: 11px;
+  padding: 11px 15px;
+  margin-bottom: 14px;
+  color: #735500;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.recommended-banner > svg {
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.recommended-banner strong {
+  font-size: 13px;
+}
+
+.recommended-banner p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: #806d38;
+}
+
+/* =========================================================
+   QUESTION CARD
+========================================================= */
+
+.interview-question-card {
+  background: #ffffff;
+  border: 1px solid #e0e8ef;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(26, 57, 84, 0.06);
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: #f9fbfd;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.question-header span {
+  color: #607589;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.question-header span:last-child {
+  color: #008f8f;
+}
+
+.question-progress {
+  width: 100%;
+  height: 4px;
+  background: #e8eff4;
+}
+
+.question-progress div {
+  height: 100%;
+  background: #00a6a6;
+  transition: width 0.25s ease;
+}
+
+.question-content {
+  padding: 19px 22px 15px;
+  box-sizing: border-box;
+}
+
+.question-content h2 {
+  margin: 0 0 15px;
+  color: #17324d;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.answer-box {
+  border: 1px solid #dcebed;
+  background: #f7fcfc;
+  border-radius: 11px;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.answer-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #008c8c;
+  font-size: 13px;
+  font-weight: 750;
+  margin-bottom: 7px;
+}
+
+.answer-box p {
+  margin: 0;
+  color: #455c70;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TIP
+========================================================= */
+
+.tip-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 11px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  background: #fffaf0;
+  border: 1px solid #f3e5bf;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tip-box > svg {
+  color: #d29a00;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tip-box strong {
+  display: block;
+  color: #745600;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.tip-box p {
+  margin: 0;
+  color: #7a6b46;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.question-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid #edf1f5;
+  background: #fbfcfd;
+  box-sizing: border-box;
+}
+
+.question-navigation button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.question-navigation button:first-child {
+  background: #edf2f6;
+  color: #4d6377;
+}
+
+.question-navigation button:last-child {
+  background: #00a1a1;
+  color: #ffffff;
+}
+
+.question-navigation button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.question-navigation button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   FOOTER NOTE
+========================================================= */
+
+.learning-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #eef9f9;
+  border: 1px solid #d4eeee;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.learning-note > svg {
+  color: #00a1a1;
+  flex-shrink: 0;
+}
+
+.learning-note p {
+  margin: 0;
+  color: #5d7182;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.learning-note strong {
+  color: #007f7f;
+}
+
+/* =========================================================
+   LAPTOP / DESKTOP
+========================================================= */
+
+@media (min-width: 1100px) {
+  .interview-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .interview-content:hover {
+    scrollbar-color: #cbd8e2 transparent;
+  }
+
+  .interview-content::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .interview-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .interview-content::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .interview-content:hover::-webkit-scrollbar-thumb {
+    background: #cbd8e2;
+  }
+}
+
+/* =========================================================
+   MEDIUM SCREEN
+========================================================= */
+
+@media (max-width: 1050px) {
+  .interview-content {
+    width: calc(100% - 292px);
+    margin-left: 292px;
+    padding: 22px 24px;
+    box-sizing: border-box;
+  }
+
+  .interview-options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recommended-option {
+    grid-column: span 2;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .interview-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .interview-header h1 {
+    font-size: 26px;
+  }
+
+  .interview-options {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-option {
+    grid-column: auto;
+  }
+
+  .role-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .role-selector select {
+    max-width: none;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .interview-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 16px 14px 22px;
+    box-sizing: border-box;
+  }
+
+  .interview-header {
+    margin-bottom: 14px;
+  }
+
+  .interview-header h1 {
+    font-size: 23px;
+  }
+
+  .interview-header p {
+    font-size: 13px;
+  }
+
+  .prep-option {
+    min-height: 75px;
+    padding: 12px;
+  }
+
+  .option-icon {
+    min-width: 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .question-content {
+    padding: 16px 14px 13px;
+  }
+
+  .question-content h2 {
+    font-size: 18px;
+  }
+
+  .question-header {
+    padding: 10px 13px;
+  }
+
+  .question-header span {
+    font-size: 11px;
+  }
+
+  .answer-box p {
+    font-size: 12.5px;
+  }
+
+  .question-navigation {
+    padding: 10px 12px;
+  }
+
+  .question-navigation button {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .learning-note {
+    align-items: flex-start;
+  }
+}

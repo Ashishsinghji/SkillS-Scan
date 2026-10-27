@@ -1,0 +1,153 @@
+.recruiter-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #021B2B, #003B4A, #00A5A5);
+}
+
+
+.recruiter-content {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+
+.recruiter-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+
+.recruiter-header p {
+    font-size: 18px;
+    color: #EAFBFB !important;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   RECRUITER STATISTICS
+========================= */
+
+.recruiter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+
+.recruiter-card {
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: .3s;
+}
+
+
+.recruiter-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* FIX: Card headings were being affected by other/global h3 styles */
+
+.recruiter-card h3 {
+    margin: 0;
+    color: #ffffff !important;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+.recruiter-card h2 {
+    font-size: 38px;
+    color: #00d4d4 !important;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.recruiter-actions {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+
+.recruiter-actions button {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 10px;
+    background: #00d4d4;
+    color: #021B2B !important;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.recruiter-actions button:hover {
+    background: #00ffff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+    .recruiter-content {
+        margin-left: 80px;
+        padding: 30px;
+        width: calc(100% - 80px);
+    }
+
+    .recruiter-header h1 {
+        font-size: 36px;
+    }
+
+    .recruiter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .recruiter-content {
+        margin-left: 0;
+        padding: 25px 18px;
+        width: 100%;
+    }
+
+    .recruiter-header h1 {
+        font-size: 28px;
+    }
+
+    .recruiter-header p {
+        font-size: 15px;
+    }
+
+    .recruiter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recruiter-actions {
+        flex-direction: column;
+    }
+
+    .recruiter-actions button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,460 @@
+.applications-page {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7fb;
+}
+
+.applications-content {
+    flex: 1;
+    margin-left: 270px;
+    padding: 30px 36px 40px;
+    box-sizing: border-box;
+}
+
+/* Page title */
+
+.applications-content h1 {
+    margin: 0 0 22px;
+    color: #06283d;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+/* =========================
+   APPLICATION SUMMARY
+========================= */
+
+.application-summary {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    min-height: 78px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+
+    padding: 14px 16px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 16px rgba(6, 40, 61, 0.06);
+}
+
+.summary-card span {
+    color: #6b747a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.summary-card strong {
+    color: #06283d;
+    font-size: 25px;
+    line-height: 1;
+}
+
+/* Summary colors */
+
+.applied-summary {
+    border-left: 4px solid #2563eb;
+}
+
+.shortlisted-summary {
+    border-left: 4px solid #16a34a;
+}
+
+.rejected-summary {
+    border-left: 4px solid #dc2626;
+}
+
+.interview-summary {
+    border-left: 4px solid #9333ea;
+}
+
+/* =========================
+   APPLICATION GRID
+========================= */
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(320px, 1fr)
+    );
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+/* =========================
+   APPLICATION CARD
+========================= */
+
+.application-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    box-sizing: border-box;
+
+    padding: 20px;
+
+    background: #ffffff;
+    border-radius: 15px;
+
+    box-shadow: 0 7px 20px rgba(6, 40, 61, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(6, 40, 61, 0.10);
+}
+
+/* Job title */
+
+.application-card h2 {
+    margin: 0 0 4px;
+
+    color: #00a3aa;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+/* Company */
+
+.application-card h3 {
+    margin: 0 0 13px;
+
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Application information */
+
+.application-card p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 6px 0;
+
+    color: #56636a;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.application-card p svg {
+    flex-shrink: 0;
+    color: #00a3aa;
+    font-size: 13px;
+}
+
+/* =========================
+   JOB UNAVAILABLE
+========================= */
+
+.job-unavailable {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 12px;
+    padding: 9px 11px;
+
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 9px;
+
+    color: #c2410c;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* =========================
+   INTERVIEW BOX
+========================= */
+
+.student-interview-box {
+    margin-top: 14px;
+    padding: 14px;
+
+    background: #f5f9ff;
+    border: 1px solid #dbeafe;
+    border-radius: 11px;
+}
+
+.student-interview-box h3 {
+    margin: 0 0 12px;
+
+    color: #2563eb;
+    font-size: 15px;
+}
+
+.interview-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin: 7px 0;
+
+    font-size: 12px;
+}
+
+.interview-detail strong {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #44515a;
+}
+
+.interview-detail strong svg {
+    color: #2563eb;
+}
+
+.interview-detail span {
+    color: #66727a;
+    text-align: right;
+}
+
+/* Join interview */
+
+.join-interview-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 12px;
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.join-interview-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.meeting-link-missing {
+    color: #b45309 !important;
+    font-size: 12px !important;
+}
+
+/* Offline interview */
+
+.offline-interview {
+    margin-top: 5px;
+}
+
+.offline-note {
+    margin-top: 10px !important;
+
+    color: #6b7280 !important;
+    font-size: 12px !important;
+}
+
+/* =========================
+   INTERVIEW COMPLETED
+========================= */
+
+.completed-interview-box {
+    margin-top: 14px;
+    padding: 10px 12px;
+
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+/* =========================
+   SELECTED
+========================= */
+
+.selected-box {
+    margin-top: 14px;
+    padding: 12px;
+
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+
+    color: #15803d;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* =========================
+   REJECTED
+========================= */
+
+.rejected-box {
+    margin-top: 14px;
+    padding: 10px 12px;
+
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+
+    color: #b91c1c;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-applications {
+    padding: 45px 25px;
+
+    background: #ffffff;
+    border-radius: 15px;
+
+    box-shadow: 0 7px 20px rgba(6, 40, 61, 0.06);
+
+    text-align: center;
+}
+
+.empty-applications h2 {
+    margin: 0 0 7px;
+
+    color: #06283d;
+    font-size: 20px;
+}
+
+.empty-applications p {
+    margin: 0;
+
+    color: #68757c;
+    font-size: 14px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .applications-content {
+        margin-left: 230px;
+        padding: 28px;
+    }
+
+    .application-summary {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .applications-content {
+        margin-left: 70px;
+        padding: 24px 20px 30px;
+    }
+
+    .applications-content h1 {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .application-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .applications-content {
+        margin-left: 0;
+        padding: 20px 16px 25px;
+    }
+
+    .application-summary {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .summary-card {
+        min-height: 70px;
+        padding: 12px 14px;
+    }
+
+    .summary-card strong {
+        font-size: 23px;
+    }
+
+    .application-card {
+        padding: 18px;
+    }
+
+    .application-card h2 {
+        font-size: 19px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .application-summary {
+        grid-template-columns: 1fr;
+    }
+
+}
